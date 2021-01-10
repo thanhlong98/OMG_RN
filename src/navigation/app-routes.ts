@@ -1,0 +1,20 @@
+export enum AppRoute {
+  APP = 'App',
+  TAB = 'Tab',
+  AUTH = 'Auth',
+  LOGIN = 'Login',
+  REGISTER = 'Register',
+  RESET_PASSWORD = 'Reset Passrord',
+  HOME = 'Home',
+  FEED = 'Feed',
+  DEMO = 'Demo',
+  LIST_DEMO = 'List demo',
+  COUNTDOWN = 'Countdown',
+  PROFILE = 'Profile',
+  SETTING = 'Setting',
+  PRODUCT = 'Product',
+  CAROUSEL = 'Carousel',
+  ADVANCED_FLATLIST = 'Advanced flatlist',
+  TRAVEL = 'Travel',
+  TRAVEL_DETAIL = 'Travel detail'
+}
