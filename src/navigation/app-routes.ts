@@ -16,5 +16,6 @@ export enum AppRoute {
   CAROUSEL = 'Carousel',
   ADVANCED_FLATLIST = 'Advanced flatlist',
   TRAVEL = 'Travel',
-  TRAVEL_DETAIL = 'Travel detail'
+  TRAVEL_DETAIL = 'Travel detail',
+  CAROUSEL2 = 'Carousel2'
 }

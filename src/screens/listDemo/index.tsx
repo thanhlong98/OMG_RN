@@ -8,19 +8,13 @@ const ListDemoScreen: React.FC<DemoNavProps<AppRoute.LIST_DEMO>> = ({
 }) => {
   return (
     <View style={{ paddingHorizontal: 15, paddingVertical: 10 }}>
-      <Text
-        style={{
-          fontSize: 20,
-          fontWeight: 'bold',
-          textAlign: 'center',
-          marginBottom: 20
-        }}
-      >
-        Dannh sách demo
-      </Text>
       <Button
         title='Carousel'
         onPress={() => navigation.push(AppRoute.CAROUSEL)}
+      />
+      <Button
+        title='Carousel2'
+        onPress={() => navigation.push(AppRoute.CAROUSEL2)}
       />
       <Button
         title='Countdown'

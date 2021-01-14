@@ -4,14 +4,13 @@ import React from 'react'
 import {
   Animated,
   Dimensions,
-  FlatList,
-  Image,
   StatusBar,
   StyleSheet,
   Text,
   TouchableOpacity,
   View
 } from 'react-native'
+import { SharedElement } from 'react-navigation-shared-element'
 
 const { width, height } = Dimensions.get('window')
 const s = width * 0.68
@@ -115,25 +114,28 @@ const TravelScreen: React.FC<DemoNavProps<AppRoute.TRAVEL>> = ({
               }}
               style={styles.itemContainer}
             >
-              <View
-                style={[
-                  StyleSheet.absoluteFillObject,
-                  { overflow: 'hidden', borderRadius: RADIUS }
-                ]}
+              <SharedElement
+                id={`travel.${item.key}.photo`}
+                style={[StyleSheet.absoluteFillObject]}
               >
-                <Animated.Image
-                  source={{ uri: item.image }}
+                <View
                   style={[
                     StyleSheet.absoluteFillObject,
-                    {
-                      // width: '100%',
-                      // height: '100%',
-                      resizeMode: 'cover',
-                      transform: [{ scale }]
-                    }
+                    { overflow: 'hidden', borderRadius: RADIUS }
                   ]}
-                />
-              </View>
+                >
+                  <Animated.Image
+                    source={{ uri: item.image }}
+                    style={[
+                      StyleSheet.absoluteFillObject,
+                      {
+                        resizeMode: 'cover',
+                        transform: [{ scale }]
+                      }
+                    ]}
+                  />
+                </View>
+              </SharedElement>
 
               <Animated.Text
                 style={[

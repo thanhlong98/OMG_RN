@@ -10,6 +10,7 @@ import {
   Animated,
   Dimensions
 } from 'react-native'
+import { SharedElement } from 'react-navigation-shared-element'
 
 const { width, height } = Dimensions.get('window')
 const s = width * 0.68
@@ -41,17 +42,22 @@ const TravelDetailScreen: React.FC<DemoNavProps<AppRoute.TRAVEL_DETAIL>> = ({
           navigation.goBack()
         }}
       />
-      <View style={[StyleSheet.absoluteFillObject]}>
-        <Image
-          source={{ uri: item.image }}
-          style={[
-            StyleSheet.absoluteFillObject,
-            {
-              resizeMode: 'cover'
-            }
-          ]}
-        />
-      </View>
+      <SharedElement
+        id={`travel.${item.key}.photo`}
+        style={[StyleSheet.absoluteFillObject]}
+      >
+        <View style={[StyleSheet.absoluteFillObject]}>
+          <Image
+            source={{ uri: item.image }}
+            style={[
+              StyleSheet.absoluteFillObject,
+              {
+                resizeMode: 'cover'
+              }
+            ]}
+          />
+        </View>
+      </SharedElement>
       <Text style={[styles.location]}>{item.location}</Text>
     </View>
   )
