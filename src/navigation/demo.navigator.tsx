@@ -7,6 +7,7 @@ import {
   StackNavigationOptions,
   StackNavigationProp
 } from '@react-navigation/stack'
+import AnimatedTabsScreen from '@screens/animatedTabs'
 import CarouselScreen from '@screens/carousel'
 import Carousel2Screen from '@screens/carousel2'
 import CountdownScreen from '@screens/countdown'
@@ -25,6 +26,7 @@ export type DemoParamList = {
   [AppRoute.CAROUSEL]: undefined
   [AppRoute.CAROUSEL2]: undefined
   [AppRoute.TRAVEL]: undefined
+  [AppRoute.ANIMATED_TABS]: undefined
   [AppRoute.TRAVEL_DETAIL]: {
     item: any
   }
@@ -81,6 +83,11 @@ const DemoNavigator: React.FC<TabNavProps<AppRoute.DEMO>> = ({
       <Stack.Screen
         name={AppRoute.CAROUSEL2}
         component={Carousel2Screen}
+        options={options}
+      />
+      <Stack.Screen
+        name={AppRoute.ANIMATED_TABS}
+        component={AnimatedTabsScreen}
         options={options}
       />
       <Stack.Screen

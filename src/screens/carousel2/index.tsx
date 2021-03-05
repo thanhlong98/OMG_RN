@@ -30,7 +30,7 @@ const Carousel2Screen: React.FC = () => {
 
   return (
     <View style={{ flex: 1, backgroundColor: '#000' }}>
-      <StatusBar hidden />
+      {/* <StatusBar hidden /> */}
 
       <View style={[StyleSheet.absoluteFillObject]}>
         {data.map((image, index) => {

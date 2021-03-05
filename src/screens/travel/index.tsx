@@ -78,7 +78,6 @@ const TravelScreen: React.FC<DemoNavProps<AppRoute.TRAVEL>> = ({
 
   return (
     <View style={{ flex: 1 }}>
-      <StatusBar hidden />
       <Animated.FlatList
         data={data}
         keyExtractor={(item) => item.key.toString()}

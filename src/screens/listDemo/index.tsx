@@ -20,6 +20,10 @@ const ListDemoScreen: React.FC<DemoNavProps<AppRoute.LIST_DEMO>> = ({
         title='Countdown'
         onPress={() => navigation.push(AppRoute.COUNTDOWN)}
       />
+      <Button
+        title='Animated Tabs'
+        onPress={() => navigation.push(AppRoute.ANIMATED_TABS)}
+      />
       <Button title='Travel' onPress={() => navigation.push(AppRoute.TRAVEL)} />
     </View>
   )

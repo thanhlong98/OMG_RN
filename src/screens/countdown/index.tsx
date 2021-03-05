@@ -107,7 +107,6 @@ const CountdownScreen: React.FC<DemoNavProps<AppRoute.COUNTDOWN>> = ({
 
   return (
     <View style={styles.container}>
-      <StatusBar hidden />
       <Animated.View
         style={[
           StyleSheet.absoluteFillObject,

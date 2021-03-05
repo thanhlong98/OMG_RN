@@ -43,7 +43,7 @@ const CarouselScreen: React.FC = () => {
 
   return (
     <View style={{ flex: 1 }}>
-      <StatusBar hidden />
+      {/* <StatusBar hidden /> */}
       <View
         style={{
           height: ITEM_HEIGHT,
